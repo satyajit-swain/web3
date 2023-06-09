@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ERC-20 Token</title>
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.3.0/dist/web3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"> </script>
+  </head>
+
+  <body>
+    <h1>ERC-20 Token</h1>
+
+    <div class="info">  
+        <h4 id="tokenname"> Name: <i></i></h4>
+        <h4 id="symbol"> Symbol: </h4>
+        <h4 id="decimals"> Decimals: </h4>
+        <h4 id="totalsupply">Total Supply: </h4>
+        <h4 id="balance">My Balance: </h4>
+        <h4 id="userAddress">User Address: </h4>
+    </div>
+    <!-- <button onclick="contractInfo(accounts[0])">Show contract Info</button> -->
+    <button type="button" id="connectButton" onclick="connect()">Connect to MetaMask</button>
+    <br /><br />
+
+    <h2>Mint Tokens</h2>
+    <input type="number" id="mintAmount" placeholder="Enter amount" />
+    <!-- <span id="numberText"></span> -->
+    <button onclick="mintTokens()">Mint</button>
+    <br /><br />
+
+    <h2>Burn Tokens</h2>
+    <input type="number" id="burnAmount" placeholder="Enter amount" />
+    <button onclick="burnTokens()">Burn</button>
+    <br /><br />
+
+    <h2>Transfer Tokens</h2>
+    <input type="text" id="toAddress" placeholder="Enter recipient address" />
+    <input type="number" id="transferAmount" placeholder="Enter amount" />
+    <button onclick="transferTokens()">Transfer</button>
+    <br /><br />
+
+    <h2>Approval</h2>
+    <input type="text" id="approvedAddress" placeholder="Enter address to allow" />
+    <input type="number" id="approvedAmount" placeholder="Enter amount" />
+    <button onclick="approves()">Approve</button>
+    <br /><br />
+
+    <h2>Transfer Tokens From</h2>
+    <input type="text" id="spenderAddress" placeholder="Enter token owner address" />
+    <input type="text" id="recipientAddress" placeholder="Enter recipient address" />
+    <input type="number" id="amountTransfer" placeholder="Enter amount" />
+    <button onclick="tokenTransferFrom()">Transfer</button>
+    <br /><br />
+
+    <h2>Allowance</h2>
+    <input type="text" id="tokenOwnerAddress" placeholder="Enter token owner address" />
+    <input type="text" id="approvalAddress" placeholder="Enter token allowed address" />
+    <button onclick="allowanceCheck()">check</button>
+    <br /><br />
+
+    <script src="./ERC20.js">  </script>
+  </body>
+</html>
