@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ERC-1155 Token</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style1155.css">
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.3.0/dist/web3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <div class="erc1155">
+      <h1>ERC-1155 Token</h1>
+
+      <div class="info">
+        <!-- <h4 id="tokenName">Name: <i></i></h4>
+        <h4 id="symbol">Symbol:</h4> -->
+        <h4 id="contractOwner">Contract Owner:</h4>
+        <h4 id="uri">URI:</h4> 
+        <!-- <h4 id="balance">My Balance:</h4> -->
+        <h4 id="userAddress">User Address:</h4>
+      </div>
+      <button type="button" id="connectButton" onclick="connect()" >
+        Connect to MetaMask
+      </button>
+      <br /><br />
+
+      <h2>Mint Tokens</h2>
+      <input type="text" id="tokenTo" placeholder="Enter benificiary address" />
+      <input type="number" id="tokenid" placeholder="Enter token id" />
+      <input type="number" id="mintAmount" placeholder="Enter amount" />
+      <button id = "mintButton" onclick="mintTokens()">Mint</button>
+      <br /><br />
+
+      <h2>Mint Batch Tokens</h2>
+      <input type="text" id="tokenToB" placeholder="Enter benificiary address" />
+      <input type="text" id="tokenidB" placeholder="Enter token id" />
+      <input type="text" id="mintAmountB" placeholder="Enter amount" />
+      <button id = "mintBatchButton" onclick="mintBatchTokens()">Mint</button>
+      <br /><br />
+
+      <h2>Burn Tokens</h2>
+      <input type="text" id="tokenFrom" placeholder="Enter address" />
+      <input type="number" id="burnid" placeholder="Enter token id" />
+      <input type="number" id="burnAmount" placeholder="Enter amount" />
+      <button id = "burnButton" onclick="burnTokens()">Burn</button>
+      <br /><br />
+
+      <h2>Burn Batch Tokens</h2>
+      <input type="text" id="tokenFromB" placeholder="Enter address" />
+      <input type="text" id="burnidB" placeholder="Enter token id" />
+      <input type="text" id="burnAmountB" placeholder="Enter amount" />
+      <button id = "burnBatchButton" onclick="burnBatchTokens()">Burn</button>
+      <br /><br />
+
+      <h2>Balance</h2>
+      <input type="text" id="addressBal" placeholder="Enter address" />
+      <input type="number" id="tokensIdBal" placeholder="Enter token id" />
+      <button id = "balButton" onclick="checkBalance()">check</button>
+      <br /><br />
+
+      <h2>Approval For All</h2>
+      <input
+        type="text"
+        id="approvedAddressForAll"
+        placeholder="Enter address to allow"
+      />
+      <form>
+        <label>
+          <input type="radio" name="myInput" value="true" />
+          Approve
+        </label>
+        <label>
+          <input type="radio" name="myInput" value="false" class="inputRed"/>
+          Revoke
+        </label>
+      </form>
+      <button id = "approveButton" onclick="approvesForAll()">Approve</button>
+      <br /><br />
+
+      <h2>Allowance For All</h2>
+      <input
+        type="text"
+        id="tokenOwnerAddress"
+        placeholder="Enter token owner address"
+      />
+      <input
+        type="text"
+        id="approvalAddress"
+        placeholder="Enter token allowed address"
+      />
+      <button id = "allowButton" onclick="allowanceCheckForAll()">check</button>
+      <br /><br />
+
+      <h2>Safe Transfer Tokens</h2>
+      <input
+        type="text"
+        id="spendersAddress"
+        placeholder="Enter token owner address"
+      />
+      <input
+        type="text"
+        id="recipientsAddress"
+        placeholder="Enter recipient address"
+      />
+      <input
+        type="number"
+        id="idToSTransfer"
+        placeholder="Enter token id"
+      />
+      <input
+        type="number"
+        id="amountToTransfer"
+        placeholder="Enter amount"
+      />
+      <button id = "safeButton" onclick="safeTokenTransferFrom()">Transfer</button>
+      <br /><br />
+
+      <h2>Safe Batch Transfer Tokens</h2>
+      <input
+        type="text"
+        id="spendersAddressB"
+        placeholder="Enter token owner address"
+      />
+      <input
+        type="text"
+        id="recipientsAddressB"
+        placeholder="Enter recipient address"
+      />
+      <input
+        type="text"
+        id="idToBTransfer"
+        placeholder="Enter token id"
+      />
+      <input
+        type="text"
+        id="amountToBTransfer"
+        placeholder="Enter amount"
+      />
+      <button id = "safeBatchButton" onclick="safeBatchTransfer()">Transfer</button>
+      <br /><br />
+      
+    </div>
+    <script src="./ERC1155.js"></script>
+  </body>
+</html>

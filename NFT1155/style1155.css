@@ -1,0 +1,13 @@
+body{font-family: 'Lato', sans-serif; background: url(./Erc.jpg); color: white;}
+.erc1155{max-width: 1200px ;margin: 20px;}
+button{background-color:cornflowerblue;padding: 10px;border-radius: 8px;color: white; border: none;}
+button:hover{background-color: black;color: gold;}
+/* button:visited{background-color: red;} */
+input{padding: 10px;background-color:transparent; border: 1px solid white; border-radius: 8px; color: whitesmoke;}
+input[type="radio"]{margin: 10px; accent-color: #008000;}
+.inputRed[type="radio"]{accent-color: red;}
+.info{ max-width: 600px; padding: 10px; margin-bottom: 10px;}
+h1{ max-width: 250px; padding: 10px;}
+span{padding-bottom: 30px;}
+button:disabled{background-color:grey}
+#imageContainer img{width: 200px; height: 200px;margin-top: 10px;background-color: white;border-radius: 16px;padding: 5px;overflow: hidden;}
